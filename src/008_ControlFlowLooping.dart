@@ -16,6 +16,14 @@ void main() {
     print("you're an expert Dart developer.");
   }
 
+  // Conditional expressions
+  var visibility = day == lunes ? 'public' : 'private';
+  print(visibility);
+
+  // eval null value
+  String? playerName;
+  print(playerName ?? 'Guest');
+
   // while
   int sabado = 6;
   day = lunes;
@@ -36,5 +44,30 @@ void main() {
   for(var index = 1; index <= 20; index++){
     if((index % 2) == 0)
       print('the number $index is pair');
+  }
+
+  // switch
+  day = DateTime.now().weekday;
+  switch (day) {
+    case 1:
+        print('today is Monday...');
+      break;
+    case 2:
+        print('today is Tuesday...');
+      break;
+    case 3:
+        print('today is wednesday...');
+      break;
+    case 4:
+        print('today is.thursday..');
+      break;
+    case 5:
+        print('today is friday...');
+      break;
+    case 6:
+        print('today is saturday...');
+      break;
+    default:
+      print('Today is sunday...');
   }
 }
