@@ -17,10 +17,13 @@ void main() {
   }
 
   // Conditional expressions
+  // zero conditional
+  // var result = condition ? expr1 : expr2;
   var visibility = day == lunes ? 'public' : 'private';
   print(visibility);
 
-  // eval null value
+  // eval null value | null conditional
+  // var result = expr1 ?? expr2;
   String? playerName;
   print(playerName ?? 'Guest');
 
@@ -41,31 +44,30 @@ void main() {
 
   // for
   int limite = 20;
-  for(var index = 1; index <= 20; index++){
-    if((index % 2) == 0)
-      print('the number $index is pair');
+  for (var index = 1; index <= limite; index++) {
+    if ((index % 2) == 0) print('the number $index is pair');
   }
 
   // switch
   day = DateTime.now().weekday;
   switch (day) {
     case 1:
-        print('today is Monday...');
+      print('today is Monday...');
       break;
     case 2:
-        print('today is Tuesday...');
+      print('today is Tuesday...');
       break;
     case 3:
-        print('today is wednesday...');
+      print('today is wednesday...');
       break;
     case 4:
-        print('today is.thursday..');
+      print('today is.thursday..');
       break;
     case 5:
-        print('today is friday...');
+      print('today is friday...');
       break;
     case 6:
-        print('today is saturday...');
+      print('today is saturday...');
       break;
     default:
       print('Today is sunday...');

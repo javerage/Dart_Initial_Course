@@ -8,6 +8,8 @@ void main() {
 }
 
 class Fruit {
+  // Para que una variable o propiedad sea privada en dart, esta debe ir
+  // precedida por un guión bajo
   late String _name;
   late String _color;
   late double _weight;

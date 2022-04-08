@@ -44,6 +44,10 @@ void main() {
   var fullNumbers = numbers + otherNumbers;
   print(fullNumbers);
 
+  // spread operator
+  var otherFullNumbers = [1, 2, 3, 4, 5, ...otherNumbers];
+  print(otherFullNumbers);
+
   // Remover un elemento de la lista
   fullNumbers.removeAt(4);
   print(fullNumbers);
@@ -58,7 +62,7 @@ void main() {
   // recorrer una lista
   fullNumbers.forEach((number) => print(number));
 
-  for(int number in queryNumbers){
+  for (int number in queryNumbers) {
     print(number);
   }
 }

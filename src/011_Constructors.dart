@@ -12,9 +12,9 @@ void main() {
 
   // cascade notation
   final student3 = new Student.anonymous()
-  ..grade = 5
-  ..name = 'Erika'
-  ..score = 9;
+    ..grade = 5
+    ..name = 'Erika'
+    ..score = 9;
   print(student3);
 }
 
@@ -33,6 +33,9 @@ class Student {
   }
 
   Student.anonymous();
+
+  // Factory Constructor
+  factory Student.emptyStudent() => Student('', 0, 0);
 
   String toString() =>
       'La calificación de ${this.name} para el ${this.grade} cuatrimestre es ${this.score}.';

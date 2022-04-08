@@ -18,7 +18,7 @@ void main() {
 
   // Set Type
   var synonyms = Map<String, String>();
-  
+
   // Add new key-value
   synonyms["Casa"] = 'Hogar';
   synonyms["Planta"] = 'Árbol';
@@ -38,4 +38,8 @@ void main() {
 
   // Get the number of key-value
   print('El map cuenta con ${synonyms.length} elementos');
+
+  // Remove a element
+  hexColors.remove('Red');
+  print(hexColors);
 }
