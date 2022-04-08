@@ -52,19 +52,27 @@ void main() {
   // Inferred Types
   var name = 'Joel Chuc';
   var day = DateTime.now().day;
-  var isNull = name == null;
+  var isNull = name.isEmpty;
 
   print(name);
   print(day);
   print(isNull);
 
+
+  // Get DataType
+  var dataType = 'Soy una variable de tipo cadena';
+  print('Soy una variable de tipo: ${dataType.runtimeType}');
+
   // dynamic
   dynamic anyValue = 'hello';
   print(anyValue);
+  print('Soy una variable de tipo: ${anyValue.runtimeType}');
   anyValue = DateTime.now().day;
   print(anyValue);
+  print('Soy una variable de tipo: ${anyValue.runtimeType}');
   anyValue = 3.1416;
   print(anyValue);
+  print('Soy una variable de tipo: ${anyValue.runtimeType}');
 
   // Constantes
   // Cuando el objetivo de una variable es almacenar un valor que nunca sufrira
@@ -77,13 +85,18 @@ void main() {
   print(sayHello);
 
   // Final
-  // Cuando el valor permanece constante, pero se desconoce al momento de la compilaciónse debe usar el modificador final
+  // Cuando el valor permanece constante, pero se desconoce al momento de la compilación
+  // se debe usar el modificador final, poque una vez que se establece el valor este nunca cambiará
   final String someDate = DateTime.now().toString();
   // para poder utilizar la clase Random es necessario incluir el paquete dart:math
   final int loter = Random().nextInt(100);
 
   print(someDate);
   print(loter);
+
+  // Late variables
+  title = 'Miss';
+  print(title);
 
   // null safety
   // A partir de la versión 2.12.0 para poder indicar que una variable puede aceptar
@@ -100,8 +113,4 @@ void main() {
   newText = 'Hello World...';
   print(numberOfStudent);
   print(newText);
-
-  // Late variables
-  title = 'Miss';
-  print(title);
 }

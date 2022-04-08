@@ -3,6 +3,8 @@ import 'dart:io';
 
 // las funciones son bloques de código que trabajan de manera independiente para
 // realizar una tarea especifica
+// las funciones tienen la siguiente estructura
+// tipo_retorno nombre_funcion(_parametros){ cuerpo_funcion; }
 void main() {
   // call classical declaration
   sayClassicalHello();

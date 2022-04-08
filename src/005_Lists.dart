@@ -1,7 +1,12 @@
+// Los indices de una lista inician en cero
 void main() {
   // List data type
   List<int> numbers = [1, 2, 3, 4, 5];
   print(numbers);
+
+  // Empty List
+  List<int> fruits = [];
+  print(fruits.isEmpty);
 
   List<String> students = ['Juan', 'Pedro', 'Pablo', 'Rosa', 'María'];
   print(students);
@@ -38,4 +43,22 @@ void main() {
   var otherNumbers = [6, 7, 8, 9, 0];
   var fullNumbers = numbers + otherNumbers;
   print(fullNumbers);
+
+  // Remover un elemento de la lista
+  fullNumbers.removeAt(4);
+  print(fullNumbers);
+
+  // Consultar dentro de una lista
+  final queryNumbers = fullNumbers.where((number) => number > 5).toList();
+  print(queryNumbers);
+
+  final index = queryNumbers.indexWhere((number) => number == 6);
+  print(index);
+
+  // recorrer una lista
+  fullNumbers.forEach((number) => print(number));
+
+  for(int number in queryNumbers){
+    print(number);
+  }
 }
